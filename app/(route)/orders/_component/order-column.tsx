@@ -49,8 +49,12 @@ export const orderColumns: ColumnDef<orderColumn>[] = [
     }
   ,
   {
+    header:"Subscription Plan",
+    accessorKey:"subscriptionPlan"
+  },
+  {
     header: "Addressline",
-    accessorKey: "landmark",
+    accessorKey: "postalAddress",
   },
   {
     header: "City",
