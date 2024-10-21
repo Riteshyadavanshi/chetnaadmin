@@ -1,0 +1,77 @@
+ 
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+ 
+
+
+
+ model pi_record {
+  id               String    @id @default(cuid()) @map("_id") @db.ObjectId
+  uid              String    @unique
+  Name             String?
+  Age              Int?
+  Gender           String?
+  GoogleLocation   String?
+  cityname         String?
+  Address          String?
+  Pincode          Int?
+  Mobileno         Float?
+  Addharnumber     Float?
+  nearestPolice    String?
+  FamilyName       String?
+  Relation         String?
+  disabilityType    String?
+  Emergencynum     Float?
+  Familyaddress    String?
+  Emailid          String?
+  Bloodgroup       String?
+  Diabetic         String?
+  Medicineallergic String?
+  Medicalhistory   String?
+  isUpdated        Boolean?  @default(false)
+  userId           String?
+  user     User ?  @relation(fields: [userId], references: [id])
+  createdAt        DateTime? @default(now())
+  updatedAt        DateTime? @updatedAt
+}
+
+model admin{
+    id String @id  @default(uuid()) @map("_id")
+    email  String
+    password  String
+}
+
+model User {
+  id            String    @id @default(cuid()) @map("_id")
+  name          String?
+  email         String    @unique
+  emailVerified DateTime?
+  image         String?
+  persons          pi_record[]
+  order Order[]
+}
+
+ model Order {
+  id             String   @id @default(cuid()) @map("_id")
+  subscriptionPlan String
+  quantity       Int
+  fullName      String
+  userId         String
+  amount         Int
+  postalAddress  String
+  city           String
+  pinCode        String
+  mobileNumber   String
+  deliveryStatus String   @default("Order placed")
+  isPaid         Boolean  @default(false)
+  user           User     @relation(fields: [userId], references: [id])
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+}
