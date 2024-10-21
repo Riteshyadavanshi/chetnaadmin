@@ -71,7 +71,7 @@ export const  UpdateForm = ({petData,uid}:UpdateFormProps) => {
       <div className="w-full shadow-md p-2 space-y-2">
         <div className="flex justify-center">
           <h1 className="text-indigo-900 text-3xl font-bold">
-            Pet Details
+            Person Details
           </h1>
         </div>
         <div>

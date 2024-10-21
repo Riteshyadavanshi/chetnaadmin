@@ -25,7 +25,8 @@ import { redirect } from 'next/navigation';
       return {
           id:order.id,
           userId:order.userId,
-          landmark:order.landmark,
+          subscriptionPlan:order.subscriptionPlan,
+          landmark:order.postalAddress,
           city:order.city,
           fullName:order.fullName,
           pinCode:order.pinCode,
