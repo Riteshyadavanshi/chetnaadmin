@@ -16,11 +16,11 @@ export const updateData=async(data:z.infer<typeof updateSchema>,uid:string)=>{
              data
           })
      }catch(err){
-      console.log(err)
-         throw err
+     
+         throw new Error("something went wrong")
      }
 }
-export const getPetData=async(uid:string)=>{
+export const getPersonData=async(uid:string)=>{
     return await prisma.pi_record.findUnique({
       where:{
          uid

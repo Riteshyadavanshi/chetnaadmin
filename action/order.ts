@@ -56,7 +56,7 @@ export const updateStatus=async(status:string,id:string,trackingId:string)=>{
                    }
                    .header {
                        background-color: #0073e6; /* Blue */
-                       color: #a21caf;
+                       color: #ffffff;
                        padding: 20px;
                        text-align: center;
                    }
@@ -80,7 +80,7 @@ export const updateStatus=async(status:string,id:string,trackingId:string)=>{
                        padding: 10px 20px;
                        margin-top: 20px;
                        font-size: 16px;
-                       color:  #a21caf;
+                       color:  #ffffff;
                        background-color: #0073e6; /* Blue */
                        border-radius: 5px;
                        text-decoration: none;
@@ -93,7 +93,7 @@ export const updateStatus=async(status:string,id:string,trackingId:string)=>{
            <body>
                <div class="container">
                    <div class="header">
-                       <h1>PawFriend</h1>
+                       <h1>ProjectChetna</h1>
                    </div>
                    <div class="content">
                        <h1>Delivery Status Update</h1>
@@ -102,11 +102,11 @@ export const updateStatus=async(status:string,id:string,trackingId:string)=>{
                        
                        <p><strong> Tracking Id:</strong>  ${trackingId}</p>
                        <p>Tracking url :<a href="https://search.app/YdiHRdFnnDoQ5JPi8">https://search.app/YdiHRdFnnDoQ5JPi8</a>
-                       <p>Thank you for shopping with PawFriend. If you have any questions or need further assistance, please feel free to contact us.</p>
+                       <p>Thank you for shopping with  ProjectChetna. If you have any questions or need further assistance, please feel free to contact us.</p>
                        <a href="https://projectchetna.in/order/${id}" class="button">track your order</a>
                    </div>
                    <div class="footer">
-                       <p>&copy; 2024 PawFriend. All rights reserved.</p>
+                       <p>&copy; 2024 projectchetna.in. All rights reserved.</p>
                    </div>
                </div>
            </body>

@@ -54,7 +54,7 @@ export const orderColumns: ColumnDef<orderColumn>[] = [
   },
   {
     header: "Addressline",
-    accessorKey: "postalAddress",
+    accessorKey: "landmark",
   },
   {
     header: "City",
